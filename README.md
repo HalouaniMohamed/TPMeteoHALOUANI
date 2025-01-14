@@ -34,3 +34,5 @@ l'URL à utiliser est : https://api.meteo-concept.com/api/forecast/daily/0?token
 - La méthode GET est utilisée pour obtenir les informations
 - Les paramètres sont passés en ajoutant "&latlng=" puis le couple de valeurs séparées par une virgule.
 - La température et Les prévisions météo se trouvent dans la section forecast.
+## Lien git
+https://github.com/HalouaniMohamed/TPMeteoHALOUANI
