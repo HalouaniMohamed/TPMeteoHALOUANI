@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Addresses</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <style>
+    h1 {
+      color: #3498db;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* General list styles */
+    .address-item {
+      margin-bottom: 15px;
+      padding: 15px;
+      border: 1px solid #3498db;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .address-item:hover {
+      border: 1px solid #3498db;
+    }
+
+    .address-item span {
+      display: block;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .address-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+<div th:replace="navbar :: navbar"></div>
+
+<div class="container address-list">
+  <h1>Les différentes adresses</h1>
+  <ul th:each="address:${allAddresses}">
+    <li class="address-item">
+      <span th:text="${'Address: ' + address.content}"></span>
+      <span th:text="${'Author: ' + address.author}"></span>
+    </li>
+  </ul>
+</div>
+
+<script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
